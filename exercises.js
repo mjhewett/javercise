@@ -88,16 +88,33 @@ function reverse(x){
 // Write a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.
 // ---------------------
 
- 
-function filterLongWords(words, i){
-  
 
+function filterLongWords(words, i){
+  var word = [];
+    for (var yas = 0; yas < words.length; yas++) {
+      if (words[yas].length > i) {
+        word.push(words[yas]);
+      }
+    }
+    return word;
 }
+
 
 // ---------------------
 // Write a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
 // ---------------------
 
 function charFreq(string){
-    
+    var obj = new Object();
+    for(var i = 0; i <string.length; i++) {
+      var x = string.charAt(i);
+      if (obj[x]) {
+        obj[x]++;
+      } else {
+        obj[x] = 1;
+      }
+      return obj
+    }
+
 }
+()
